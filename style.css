@@ -1,0 +1,103 @@
+/* Basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0F2027, #2C5364);
+    color: #E0E0E0;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Section Styling */
+section {
+    margin: 3rem auto;
+    width: 85%;
+    max-width: 1200px;
+    padding: 2rem;
+    background-color: #1F1F1F;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #FF9800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 1rem 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4DD0E1;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #FF9800;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+ul li a:hover {
+    color: #E91E63;
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    section {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    ul li a {
+        font-size: 1.1rem;
+    }
+}
